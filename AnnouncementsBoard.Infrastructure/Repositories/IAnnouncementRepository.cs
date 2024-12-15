@@ -1,14 +1,13 @@
-﻿using AnnouncementsBoard.Domain.Models;
+﻿using AnnouncementsBoard.Domain.Entities;
 
 namespace AnnouncementsBoard.Infrastructure.Repositories
 {
     public interface IAnnouncementRepository
     {
-        Task<IEnumerable<Announcement>> GetAllAnnouncementsAsync();
-        Task<IEnumerable<Announcement>> GetAnnouncementsByCategoryAsync(string category);
-        Task<Announcement> GetAnnouncementByIdAsync(int id);
-        Task AddAnnouncementAsync(Announcement announcement);
-        Task UpdateAnnouncementAsync(Announcement announcement);
-        Task DeleteAnnouncementAsync(int id);
+        Task<List<Announcement>> GetAllAsync();
+        Task<Announcement> GetByIdAsync(int id);
+        Task CreateAsync(Announcement announcement);
+        Task UpdateAsync(Announcement announcement);
+        Task DeleteAsync(int id);
     }
 }

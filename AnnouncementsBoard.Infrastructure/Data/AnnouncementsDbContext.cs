@@ -1,4 +1,4 @@
-﻿using AnnouncementsBoard.Domain.Models;
+﻿using AnnouncementsBoard.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace AnnouncementsBoard.Infrastructure.Data
@@ -10,7 +10,6 @@ namespace AnnouncementsBoard.Infrastructure.Data
         }
 
         public DbSet<Announcement> Announcements { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

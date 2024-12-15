@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AnnouncementsBoard.Domain\AnnouncementsBoard.Domain.csproj" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.18" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\AnnouncementsBoard.Application\AnnouncementsBoard.Application.csproj" />
+    <ProjectReference Include="..\AnnouncementsBoard.Domain\AnnouncementsBoard.Domain.csproj" />
+    <ProjectReference Include="..\AnnouncementsBoard.Infrastructure\AnnouncementsBoard.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

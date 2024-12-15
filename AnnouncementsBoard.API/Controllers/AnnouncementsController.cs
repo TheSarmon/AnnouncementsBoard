@@ -1,4 +1,4 @@
-﻿using AnnouncementsBoard.Application.Services;
+﻿using AnnouncementsBoard.Application.Services.Interfaces;
 using AnnouncementsBoard.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,104 +8,61 @@ namespace AnnouncementsBoard.API.Controllers
     [ApiController]
     public class AnnouncementsController : ControllerBase
     {
-        private readonly IAnnouncementService _announcementService;
+        private readonly IAnnouncementService _service;
 
-        public AnnouncementsController(IAnnouncementService announcementService)
+        public AnnouncementsController(IAnnouncementService service)
         {
-            _announcementService = announcementService;
+            _service = service;
         }
 
-        // GET: api/announcements
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Announcement>>> GetAll()
+        public async Task<IActionResult> GetAllAnnouncements()
         {
-            var announcements = await _announcementService.GetAllAnnouncementsAsync();
+            var announcements = await _service.GetAllAnnouncementsAsync();
             return Ok(announcements);
         }
 
-        // GET: api/announcements/category/{category}
-        [HttpGet("category/{category}")]
-        public async Task<ActionResult<IEnumerable<Announcement>>> GetByCategory(string category)
-        {
-            var announcements = await _announcementService.GetAnnouncementsByCategoryAsync(category);
-            if (announcements == null || !announcements.Any())
-            {
-                return NotFound($"No announcements found in the category '{category}'.");
-            }
-            return Ok(announcements);
-        }
-
-        // GET: api/announcements/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult<Announcement>> GetById(int id)
+        public async Task<IActionResult> GetAnnouncementById(int id)
         {
-            var announcement = await _announcementService.GetAnnouncementByIdAsync(id);
+            var announcement = await _service.GetAnnouncementByIdAsync(id);
             if (announcement == null)
-            {
-                return NotFound($"Announcement with ID {id} not found.");
-            }
+                return NotFound();
+
             return Ok(announcement);
         }
 
-        // POST: api/announcements
         [HttpPost]
-        public async Task<ActionResult> Create([FromBody] Announcement announcement)
+        public async Task<IActionResult> CreateAnnouncement([FromBody] CreateAnnouncementDTO createAnnouncementDTO)
         {
-            if (!ModelState.IsValid)
+            if (createAnnouncementDTO == null)
             {
-                return BadRequest(ModelState); // Повертаємо помилки валідації
+                return BadRequest("Announcement data is required.");
             }
 
-            await _announcementService.AddAnnouncementAsync(announcement);
-            return CreatedAtAction(nameof(GetById), new { id = announcement.Id }, announcement);
+            var createdAnnouncement = await _service.CreateAnnouncementAsync(createAnnouncementDTO);
+
+            return CreatedAtAction(nameof(GetAnnouncementById), new { id = createdAnnouncement.Id }, createdAnnouncement);
         }
 
-        // PUT: api/announcements/{id}
         [HttpPut("{id}")]
-        public async Task<ActionResult> Update(int id, [FromBody] Announcement announcement)
+        public async Task<IActionResult> UpdateAnnouncement(int id, [FromBody] UpdateAnnouncementDTO updateAnnouncementDTO)
         {
-            if (!ModelState.IsValid)
+            if (updateAnnouncementDTO == null)
             {
-                return BadRequest(ModelState); // Перевірка валідності
+                return BadRequest("Announcement data is required.");
             }
 
-            if (id != announcement.Id)
-            {
-                return BadRequest("ID in the URL does not match the ID in the body.");
-            }
+            var updatedAnnouncement = await _service.UpdateAnnouncementAsync(id, updateAnnouncementDTO);
 
-            try
-            {
-                await _announcementService.UpdateAnnouncementAsync(announcement);
-                return NoContent(); // Успішне оновлення
-            }
-            catch (KeyNotFoundException ex)
-            {
-                return NotFound(ex.Message); // Якщо оголошення з таким ID не знайдено
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
-            }
+            return Ok(updatedAnnouncement);
         }
 
-        // DELETE: api/announcements/{id}
         [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(int id)
+        public async Task<IActionResult> DeleteAnnouncement(int id)
         {
-            try
-            {
-                await _announcementService.DeleteAnnouncementAsync(id);
-                return NoContent(); // Успішне видалення
-            }
-            catch (KeyNotFoundException ex)
-            {
-                return NotFound(ex.Message); // Якщо оголошення з таким ID не знайдено
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
-            }
+            await _service.DeleteAnnouncementAsync(id);
+            return NoContent();
         }
     }
 }

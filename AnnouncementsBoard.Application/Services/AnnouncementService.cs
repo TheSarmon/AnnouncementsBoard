@@ -1,58 +1,56 @@
-﻿using AnnouncementsBoard.Domain.Models;
+﻿using AnnouncementsBoard.Application.Services.Interfaces;
+using AnnouncementsBoard.Domain.Entities;
+using AnnouncementsBoard.Domain.Models;
 using AnnouncementsBoard.Infrastructure.Repositories;
+using AutoMapper;
 
 namespace AnnouncementsBoard.Application.Services
 {
     public class AnnouncementService : IAnnouncementService
     {
         private readonly IAnnouncementRepository _repository;
+        private readonly IMapper _mapper;
 
-        public AnnouncementService(IAnnouncementRepository repository)
+        public AnnouncementService(IAnnouncementRepository repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
         }
 
-        public async Task<IEnumerable<Announcement>> GetAllAnnouncementsAsync()
+        public async Task<List<Announcement>> GetAllAnnouncementsAsync()
         {
-            return await _repository.GetAllAnnouncementsAsync();
-        }
-
-        public async Task<IEnumerable<Announcement>> GetAnnouncementsByCategoryAsync(string category)
-        {
-            return await _repository.GetAnnouncementsByCategoryAsync(category);
+            return await _repository.GetAllAsync();
         }
 
         public async Task<Announcement> GetAnnouncementByIdAsync(int id)
         {
-            return await _repository.GetAnnouncementByIdAsync(id);
+            return await _repository.GetByIdAsync(id);
         }
 
-        public async Task AddAnnouncementAsync(Announcement announcement)
+        public async Task<Announcement> CreateAnnouncementAsync(CreateAnnouncementDTO CreateAnnouncementDTO)
         {
-            announcement.CreatedDate = DateTime.UtcNow;
-            await _repository.AddAnnouncementAsync(announcement);
+            var announcement = _mapper.Map<Announcement>(CreateAnnouncementDTO);
+
+            await _repository.CreateAsync(announcement);
+
+            return announcement;
         }
 
-        public async Task UpdateAnnouncementAsync(Announcement announcement)
+        public async Task<Announcement> UpdateAnnouncementAsync(int id, UpdateAnnouncementDTO announcementDTO)
         {
-            var existingAnnouncement = await _repository.GetAnnouncementByIdAsync(announcement.Id);
-            if (existingAnnouncement == null)
-            {
-                throw new KeyNotFoundException($"Announcement with ID {announcement.Id} not found.");
-            }
+            var announcement = await _repository.GetByIdAsync(id);
+            if (announcement == null) throw new KeyNotFoundException("Announcement not found.");
 
-            await _repository.UpdateAnnouncementAsync(announcement);
+            _mapper.Map(announcementDTO, announcement);
+
+            await _repository.UpdateAsync(announcement);
+
+            return announcement;
         }
 
         public async Task DeleteAnnouncementAsync(int id)
         {
-            var existingAnnouncement = await _repository.GetAnnouncementByIdAsync(id);
-            if (existingAnnouncement == null)
-            {
-                throw new KeyNotFoundException($"Announcement with ID {id} not found.");
-            }
-
-            await _repository.DeleteAnnouncementAsync(id);
+            await _repository.DeleteAsync(id);
         }
     }
 }

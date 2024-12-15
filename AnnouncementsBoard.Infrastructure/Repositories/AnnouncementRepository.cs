@@ -1,7 +1,7 @@
 ﻿using AnnouncementsBoard.Infrastructure.Data;
-using AnnouncementsBoard.Domain.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using AnnouncementsBoard.Domain.Entities;
 
 namespace AnnouncementsBoard.Infrastructure.Repositories
 {
@@ -13,64 +13,37 @@ namespace AnnouncementsBoard.Infrastructure.Repositories
         {
             _context = context;
         }
-        public async Task<IEnumerable<Announcement>> GetAllAnnouncementsAsync()
+
+        public async Task<List<Announcement>> GetAllAsync()
         {
-            return await _context.Announcements
-                .FromSqlRaw("EXEC GetAllAnnouncements").ToListAsync();
+            var query = "EXEC GetAllAnnouncements";
+            return await _context.Announcements.FromSqlRaw(query).ToListAsync();
         }
 
-        public async Task<IEnumerable<Announcement>> GetAnnouncementsByCategoryAsync(string category)
+        public async Task<Announcement> GetByIdAsync(int id)
         {
-            var categoryParam = new SqlParameter("@Category", category);
+            var query = "EXEC GetAnnouncementById @Id = {0}";
 
-            return await _context.Announcements
-                                 .FromSqlRaw("EXEC GetAnnouncementsByCategory @Category", categoryParam)
-                                 .ToListAsync();
+            var result = await _context.Announcements.FromSqlRaw(query, id).ToListAsync();
+            return result.FirstOrDefault();
         }
 
-        public async Task<Announcement> GetAnnouncementByIdAsync(int id)
+        public async Task CreateAsync(Announcement announcement)
         {
-            var result = await _context.Announcements
-                            .FromSqlRaw("EXEC GetAnnouncementById @Id", new SqlParameter("@Id", id))
-                            .ToListAsync();
-
-            return result.SingleOrDefault();
+            var query = "EXEC InsertAnnouncement @Title = {0}, @Description = {1}, @CreatedDate = {2}, @Status = {3}, @Category = {4}, @SubCategory = {5}";
+            await _context.Database.ExecuteSqlRawAsync(query, announcement.Title, announcement.Description, announcement.CreatedDate, announcement.Status, announcement.Category, announcement.SubCategory);
         }
 
-        public async Task AddAnnouncementAsync(Announcement announcement)
+        public async Task UpdateAsync(Announcement announcement)
         {
-            var titleParam = new SqlParameter("@Title", announcement.Title);
-            var descriptionParam = new SqlParameter("@Description", announcement.Description);
-            var createdDateParam = new SqlParameter("@CreatedDate", announcement.CreatedDate);
-            var statusParam = new SqlParameter("@Status", announcement.Status);
-            var categoryParam = new SqlParameter("@Category", announcement.Category);
-            var subCategoryParam = new SqlParameter("@SubCategory", announcement.SubCategory);
-
-            await _context.Database.ExecuteSqlRawAsync(
-                "EXEC InsertAnnouncement @Title, @Description, @CreatedDate, @Status, @Category, @SubCategory",
-                titleParam, descriptionParam, createdDateParam, statusParam, categoryParam, subCategoryParam
-            );
+            var query = "EXEC UpdateAnnouncement @Id = {0}, @Title = {1}, @Description = {2}, @Status = {3}, @Category = {4}, @SubCategory = {5}";
+            await _context.Database.ExecuteSqlRawAsync(query, announcement.Id, announcement.Title, announcement.Description, announcement.Status, announcement.Category, announcement.SubCategory);
         }
 
-        public async Task UpdateAnnouncementAsync(Announcement announcement)
+        public async Task DeleteAsync(int id)
         {
-            var idParam = new SqlParameter("@Id", announcement.Id);
-            var titleParam = new SqlParameter("@Title", announcement.Title);
-            var descriptionParam = new SqlParameter("@Description", announcement.Description);
-            var statusParam = new SqlParameter("@Status", announcement.Status);
-            var categoryParam = new SqlParameter("@Category", announcement.Category);
-            var subCategoryParam = new SqlParameter("@SubCategory", announcement.SubCategory);
-
-            await _context.Database.ExecuteSqlRawAsync(
-                "EXEC UpdateAnnouncement @Id, @Title, @Description, @Status, @Category, @SubCategory",
-                idParam, titleParam, descriptionParam, statusParam, categoryParam, subCategoryParam
-            );
-        }
-
-        public async Task DeleteAnnouncementAsync(int id)
-        {
-            var idParam = new SqlParameter("@Id", id);
-            await _context.Database.ExecuteSqlRawAsync("EXEC DeleteAnnouncement @Id", idParam);
+            var query = "EXEC DeleteAnnouncement @Id = {0}";
+            await _context.Database.ExecuteSqlRawAsync(query, id);
         }
     }
 }

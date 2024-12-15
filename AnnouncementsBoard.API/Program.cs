@@ -3,6 +3,8 @@ using AnnouncementsBoard.Infrastructure.Repositories;
 using AnnouncementsBoard.Application.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using AnnouncementsBoard.Application.Services.Interfaces;
+using AnnouncementsBoard.Application.Mappings;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,8 @@ builder.Services.AddDbContext<AnnouncementsDbContext>(options =>
 
 builder.Services.AddScoped<IAnnouncementRepository, AnnouncementRepository>();
 builder.Services.AddScoped<IAnnouncementService, AnnouncementService>();
+
+builder.Services.AddAutoMapper(typeof(AnnouncementProfile));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
