@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnnouncementsBoard.Domain",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnnouncementsBoard.Application", "AnnouncementsBoard.Application\AnnouncementsBoard.Application.csproj", "{9F0A366F-4EF5-493C-BF9F-99E95F92BF22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnouncementsBoard.Frontend", "AnnouncementsBoard.Frontend\AnnouncementsBoard.Frontend.csproj", "{FC26A47C-CD93-41A4-89E2-F39B8809D914}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnouncementsBoard.Frontend", "AnnouncementsBoard.Frontend\AnnouncementsBoard.Frontend.csproj", "{1C54CF4D-C696-4C47-BC7B-F719D022EC95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{9F0A366F-4EF5-493C-BF9F-99E95F92BF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F0A366F-4EF5-493C-BF9F-99E95F92BF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F0A366F-4EF5-493C-BF9F-99E95F92BF22}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FC26A47C-CD93-41A4-89E2-F39B8809D914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC26A47C-CD93-41A4-89E2-F39B8809D914}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC26A47C-CD93-41A4-89E2-F39B8809D914}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC26A47C-CD93-41A4-89E2-F39B8809D914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C54CF4D-C696-4C47-BC7B-F719D022EC95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C54CF4D-C696-4C47-BC7B-F719D022EC95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C54CF4D-C696-4C47-BC7B-F719D022EC95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C54CF4D-C696-4C47-BC7B-F719D022EC95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

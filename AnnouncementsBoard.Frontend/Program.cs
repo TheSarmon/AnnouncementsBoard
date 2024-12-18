@@ -1,7 +1,16 @@
+using AnnouncementsBoard.Frontend.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddHttpClient("AnnouncementsAPI", client =>
+{
+    client.BaseAddress = new Uri("https://localhost:7273/api/");
+});
+
+builder.Services.AddScoped<FrontendService>();
 
 var app = builder.Build();
 
@@ -17,6 +26,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
 
 app.UseAuthorization();
 

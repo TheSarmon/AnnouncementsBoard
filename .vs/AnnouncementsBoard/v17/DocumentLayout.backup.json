@@ -3,36 +3,61 @@
   "WorkspaceRootPath": "C:\\projects\\si heshtek\\AnnouncementsBoard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{35FB7E41-0697-4BFE-8D8E-15E464E7AE95}|AnnouncementsBoard.API\\AnnouncementsBoard.API.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.api\\controllers\\announcementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FB7E41-0697-4BFE-8D8E-15E464E7AE95}|AnnouncementsBoard.API\\AnnouncementsBoard.API.csproj|solutionrelative:announcementsboard.api\\controllers\\announcementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.frontend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|solutionrelative:announcementsboard.frontend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F0A366F-4EF5-493C-BF9F-99E95F92BF22}|AnnouncementsBoard.Application\\AnnouncementsBoard.Application.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.application\\services\\announcementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F0A366F-4EF5-493C-BF9F-99E95F92BF22}|AnnouncementsBoard.Application\\AnnouncementsBoard.Application.csproj|solutionrelative:announcementsboard.application\\services\\announcementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ryzen\\AppData\\Local\\Temp\\kycebrtl..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F0A366F-4EF5-493C-BF9F-99E95F92BF22}|AnnouncementsBoard.Application\\AnnouncementsBoard.Application.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.application\\services\\interfaces\\iannouncementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F0A366F-4EF5-493C-BF9F-99E95F92BF22}|AnnouncementsBoard.Application\\AnnouncementsBoard.Application.csproj|solutionrelative:announcementsboard.application\\services\\interfaces\\iannouncementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.frontend\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|solutionrelative:announcementsboard.frontend\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67B5DD7C-B4F8-49BB-8E3E-1DA4E8B98075}|AnnouncementsBoard.Infrastructure\\AnnouncementsBoard.Infrastructure.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.infrastructure\\repositories\\announcementrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67B5DD7C-B4F8-49BB-8E3E-1DA4E8B98075}|AnnouncementsBoard.Infrastructure\\AnnouncementsBoard.Infrastructure.csproj|solutionrelative:announcementsboard.infrastructure\\repositories\\announcementrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.frontend\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|solutionrelative:announcementsboard.frontend\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C32D95B-7D60-4044-940A-5954A812C4D2}|AnnouncementsBoard.Domain\\AnnouncementsBoard.Domain.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.domain\\models\\updateannouncementdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C32D95B-7D60-4044-940A-5954A812C4D2}|AnnouncementsBoard.Domain\\AnnouncementsBoard.Domain.csproj|solutionrelative:announcementsboard.domain\\models\\updateannouncementdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.frontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|solutionrelative:announcementsboard.frontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F0A366F-4EF5-493C-BF9F-99E95F92BF22}|AnnouncementsBoard.Application\\AnnouncementsBoard.Application.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.application\\mappings\\announcementprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F0A366F-4EF5-493C-BF9F-99E95F92BF22}|AnnouncementsBoard.Application\\AnnouncementsBoard.Application.csproj|solutionrelative:announcementsboard.application\\mappings\\announcementprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.frontend\\services\\frontendservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|solutionrelative:announcementsboard.frontend\\services\\frontendservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C32D95B-7D60-4044-940A-5954A812C4D2}|AnnouncementsBoard.Domain\\AnnouncementsBoard.Domain.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.domain\\models\\createannouncementdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C32D95B-7D60-4044-940A-5954A812C4D2}|AnnouncementsBoard.Domain\\AnnouncementsBoard.Domain.csproj|solutionrelative:announcementsboard.domain\\models\\createannouncementdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35FB7E41-0697-4BFE-8D8E-15E464E7AE95}|AnnouncementsBoard.API\\AnnouncementsBoard.API.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.api\\announcementsboard.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{35FB7E41-0697-4BFE-8D8E-15E464E7AE95}|AnnouncementsBoard.API\\AnnouncementsBoard.API.csproj|solutionrelative:announcementsboard.api\\announcementsboard.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C32D95B-7D60-4044-940A-5954A812C4D2}|AnnouncementsBoard.Domain\\AnnouncementsBoard.Domain.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.domain\\models\\announcement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C32D95B-7D60-4044-940A-5954A812C4D2}|AnnouncementsBoard.Domain\\AnnouncementsBoard.Domain.csproj|solutionrelative:announcementsboard.domain\\models\\announcement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9F0A366F-4EF5-493C-BF9F-99E95F92BF22}|AnnouncementsBoard.Application\\AnnouncementsBoard.Application.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.application\\announcementsboard.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9F0A366F-4EF5-493C-BF9F-99E95F92BF22}|AnnouncementsBoard.Application\\AnnouncementsBoard.Application.csproj|solutionrelative:announcementsboard.application\\announcementsboard.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C32D95B-7D60-4044-940A-5954A812C4D2}|AnnouncementsBoard.Domain\\AnnouncementsBoard.Domain.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.domain\\announcementsboard.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7C32D95B-7D60-4044-940A-5954A812C4D2}|AnnouncementsBoard.Domain\\AnnouncementsBoard.Domain.csproj|solutionrelative:announcementsboard.domain\\announcementsboard.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.frontend\\announcementsboard.frontend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|solutionrelative:announcementsboard.frontend\\announcementsboard.frontend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.frontend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|solutionrelative:announcementsboard.frontend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.frontend\\views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|solutionrelative:announcementsboard.frontend\\views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|c:\\projects\\si heshtek\\announcementsboard\\announcementsboard.frontend\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C54CF4D-C696-4C47-BC7B-F719D022EC95}|AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj|solutionrelative:announcementsboard.frontend\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ryzen\\AppData\\Local\\Temp\\kycebrtl..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ryzen\\AppData\\Local\\Temp\\kycebrtl..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +67,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,106 +75,169 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Announcement.cs",
-              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Domain\\Models\\Announcement.cs",
-              "RelativeDocumentMoniker": "AnnouncementsBoard.Domain\\Models\\Announcement.cs",
-              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Domain\\Models\\Announcement.cs",
-              "RelativeToolTip": "AnnouncementsBoard.Domain\\Models\\Announcement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T19:36:00.065Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AnnouncementProfile.cs",
-              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Application\\Mappings\\AnnouncementProfile.cs",
-              "RelativeDocumentMoniker": "AnnouncementsBoard.Application\\Mappings\\AnnouncementProfile.cs",
-              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Application\\Mappings\\AnnouncementProfile.cs",
-              "RelativeToolTip": "AnnouncementsBoard.Application\\Mappings\\AnnouncementProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T19:34:16.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UpdateAnnouncementDTO.cs",
-              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Domain\\Models\\UpdateAnnouncementDTO.cs",
-              "RelativeDocumentMoniker": "AnnouncementsBoard.Domain\\Models\\UpdateAnnouncementDTO.cs",
-              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Domain\\Models\\UpdateAnnouncementDTO.cs",
-              "RelativeToolTip": "AnnouncementsBoard.Domain\\Models\\UpdateAnnouncementDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T19:13:40.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AnnouncementRepository.cs",
-              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Infrastructure\\Repositories\\AnnouncementRepository.cs",
-              "RelativeDocumentMoniker": "AnnouncementsBoard.Infrastructure\\Repositories\\AnnouncementRepository.cs",
-              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Infrastructure\\Repositories\\AnnouncementRepository.cs",
-              "RelativeToolTip": "AnnouncementsBoard.Infrastructure\\Repositories\\AnnouncementRepository.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAqwB4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T18:57:58.512Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IAnnouncementService.cs",
-              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Application\\Services\\Interfaces\\IAnnouncementService.cs",
-              "RelativeDocumentMoniker": "AnnouncementsBoard.Application\\Services\\Interfaces\\IAnnouncementService.cs",
-              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Application\\Services\\Interfaces\\IAnnouncementService.cs",
-              "RelativeToolTip": "AnnouncementsBoard.Application\\Services\\Interfaces\\IAnnouncementService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T18:57:29.053Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AnnouncementService.cs",
-              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Application\\Services\\AnnouncementService.cs",
-              "RelativeDocumentMoniker": "AnnouncementsBoard.Application\\Services\\AnnouncementService.cs",
-              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Application\\Services\\AnnouncementService.cs",
-              "RelativeToolTip": "AnnouncementsBoard.Application\\Services\\AnnouncementService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA/wB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T18:57:12.573Z",
+              "Title": "SQLQuery1.sql ",
+              "DocumentMoniker": "C:\\Users\\ryzen\\AppData\\Local\\Temp\\kycebrtl..sql",
+              "RelativeDocumentMoniker": "..\\..\\..\\Users\\ryzen\\AppData\\Local\\Temp\\kycebrtl..sql",
+              "ToolTip": "SQLQuery1.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-12-18T20:22:44.145Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "CreateAnnouncementDTO.cs",
-              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Domain\\Models\\CreateAnnouncementDTO.cs",
-              "RelativeDocumentMoniker": "AnnouncementsBoard.Domain\\Models\\CreateAnnouncementDTO.cs",
-              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Domain\\Models\\CreateAnnouncementDTO.cs*",
-              "RelativeToolTip": "AnnouncementsBoard.Domain\\Models\\CreateAnnouncementDTO.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T18:48:30.323Z",
+              "Title": "AnnouncementsBoard.API",
+              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.API\\AnnouncementsBoard.API.csproj",
+              "RelativeDocumentMoniker": "AnnouncementsBoard.API\\AnnouncementsBoard.API.csproj",
+              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.API\\AnnouncementsBoard.API.csproj",
+              "RelativeToolTip": "AnnouncementsBoard.API\\AnnouncementsBoard.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-18T19:59:28.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AnnouncementsBoard.Application",
+              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Application\\AnnouncementsBoard.Application.csproj",
+              "RelativeDocumentMoniker": "AnnouncementsBoard.Application\\AnnouncementsBoard.Application.csproj",
+              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Application\\AnnouncementsBoard.Application.csproj",
+              "RelativeToolTip": "AnnouncementsBoard.Application\\AnnouncementsBoard.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-18T19:59:26.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AnnouncementsBoard.Domain",
+              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Domain\\AnnouncementsBoard.Domain.csproj",
+              "RelativeDocumentMoniker": "AnnouncementsBoard.Domain\\AnnouncementsBoard.Domain.csproj",
+              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Domain\\AnnouncementsBoard.Domain.csproj",
+              "RelativeToolTip": "AnnouncementsBoard.Domain\\AnnouncementsBoard.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-18T19:59:25.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AnnouncementsBoard.Frontend",
+              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj",
+              "RelativeDocumentMoniker": "AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj",
+              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj",
+              "RelativeToolTip": "AnnouncementsBoard.Frontend\\AnnouncementsBoard.Frontend.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-18T19:59:23.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "AnnouncementsBoard.Frontend\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "AnnouncementsBoard.Frontend\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T19:58:27.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Views\\Home\\Edit.cshtml",
+              "RelativeDocumentMoniker": "AnnouncementsBoard.Frontend\\Views\\Home\\Edit.cshtml",
+              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Views\\Home\\Edit.cshtml",
+              "RelativeToolTip": "AnnouncementsBoard.Frontend\\Views\\Home\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T19:58:01.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Views\\Home\\Create.cshtml",
+              "RelativeDocumentMoniker": "AnnouncementsBoard.Frontend\\Views\\Home\\Create.cshtml",
+              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Views\\Home\\Create.cshtml",
+              "RelativeToolTip": "AnnouncementsBoard.Frontend\\Views\\Home\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T19:55:58.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AnnouncementsController.cs",
-              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.API\\Controllers\\AnnouncementsController.cs",
-              "RelativeDocumentMoniker": "AnnouncementsBoard.API\\Controllers\\AnnouncementsController.cs",
-              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.API\\Controllers\\AnnouncementsController.cs",
-              "RelativeToolTip": "AnnouncementsBoard.API\\Controllers\\AnnouncementsController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAAADQAAABEAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "AnnouncementsBoard.Frontend\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "AnnouncementsBoard.Frontend\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T19:54:08.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "AnnouncementsBoard.Frontend\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "AnnouncementsBoard.Frontend\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T18:47:33.065Z",
+              "WhenOpened": "2024-12-18T19:53:10.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "AnnouncementsBoard.Frontend\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "AnnouncementsBoard.Frontend\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T19:52:22.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrontendService.cs",
+              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Services\\FrontendService.cs",
+              "RelativeDocumentMoniker": "AnnouncementsBoard.Frontend\\Services\\FrontendService.cs",
+              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Services\\FrontendService.cs",
+              "RelativeToolTip": "AnnouncementsBoard.Frontend\\Services\\FrontendService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAqwBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T19:50:49.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Program.cs",
+              "RelativeDocumentMoniker": "AnnouncementsBoard.Frontend\\Program.cs",
+              "ToolTip": "C:\\projects\\si heshtek\\AnnouncementsBoard\\AnnouncementsBoard.Frontend\\Program.cs",
+              "RelativeToolTip": "AnnouncementsBoard.Frontend\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T19:50:04.12Z",
               "EditorCaption": ""
             }
           ]

@@ -1,8 +1,31 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model List<Announcement>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<a href="@Url.Action("Create")" class="btn btn-success">Add New</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Subcategory</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var announcement in Model)
+        {
+            <tr>
+                <td>@announcement.Title</td>
+                <td>@announcement.Description</td>
+                <td>@announcement.Category</td>
+                <td>@announcement.SubCategory</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = announcement.Id })" class="btn btn-primary">Edit</a>
+                    <a href="@Url.Action("Delete", new { id = announcement.Id })" class="btn btn-danger"
+                       onclick="return confirm('Are you sure you want to delete this announcement?');">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

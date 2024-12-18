@@ -1,32 +1,68 @@
 ﻿using AnnouncementsBoard.Frontend.Models;
+using AnnouncementsBoard.Frontend.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace AnnouncementsBoard.Frontend.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly FrontendService _service;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(FrontendService service)
         {
-            _logger = logger;
+            _service = service;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
+        {
+            var announcements = await _service.GetAllAsync();
+            return View(announcements);
+        }
+
+        public IActionResult Create()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public async Task<IActionResult> Create(CreateAnnouncementDTO dto)
         {
-            return View();
+            if (!ModelState.IsValid) return View(dto);
+
+            await _service.CreateAsync(dto);
+            return RedirectToAction(nameof(Index));
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public async Task<IActionResult> Edit(int id)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var announcement = await _service.GetByIdAsync(id);
+            if (announcement == null) return NotFound();
+
+            var dto = new UpdateAnnouncementDTO
+            {
+                Title = announcement.Title,
+                Description = announcement.Description,
+                Category = announcement.Category,
+                SubCategory = announcement.SubCategory,
+                Status = announcement.Status
+            };
+
+            return View(dto);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, UpdateAnnouncementDTO dto)
+        {
+            if (!ModelState.IsValid) return View(dto);
+
+            await _service.UpdateAsync(id, dto);
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _service.DeleteAsync(id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

@@ -2,7 +2,6 @@
 using AnnouncementsBoard.Domain.Models;
 using AutoMapper;
 
-
 namespace AnnouncementsBoard.Application.Mappings
 {
     public class AnnouncementProfile : Profile
@@ -18,6 +17,7 @@ namespace AnnouncementsBoard.Application.Mappings
                 .ForMember(dest => dest.CreatedDate, opt => opt.Ignore())
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src =>
                     string.IsNullOrEmpty(src.Status) ? "Active" : src.Status));
+
         }
     }
 }
