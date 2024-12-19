@@ -1,14 +1,15 @@
-﻿using AnnouncementsBoard.Frontend.Models;
-using AnnouncementsBoard.Frontend.Services;
+﻿using AnnouncementsBoard.Frontend.Application.Services.Interfaces;
+using AnnouncementsBoard.Frontend.Domain.DTO;
+using AnnouncementsBoard.Frontend.Constants;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnnouncementsBoard.Frontend.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly FrontendService _service;
+        private readonly IFrontendService _service;
 
-        public HomeController(FrontendService service)
+        public HomeController(IFrontendService service)
         {
             _service = service;
         }
@@ -18,16 +19,20 @@ namespace AnnouncementsBoard.Frontend.Controllers
             var announcements = await _service.GetAllAsync();
             return View(announcements);
         }
-
         public IActionResult Create()
         {
+            ViewBag.Categories = Categories.CategoryData.Keys.ToList();
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(CreateAnnouncementDTO dto)
         {
-            if (!ModelState.IsValid) return View(dto);
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Categories = Categories.CategoryData.Keys.ToList();
+                return View(dto);
+            }
 
             await _service.CreateAsync(dto);
             return RedirectToAction(nameof(Index));
@@ -47,13 +52,20 @@ namespace AnnouncementsBoard.Frontend.Controllers
                 Status = announcement.Status
             };
 
+            ViewBag.Categories = Categories.CategoryData.Keys.ToList();
+            ViewBag.Statuses = new List<string> { "Активне", "Неактивне" }; // Додаємо статуси
             return View(dto);
         }
 
         [HttpPost]
         public async Task<IActionResult> Edit(int id, UpdateAnnouncementDTO dto)
         {
-            if (!ModelState.IsValid) return View(dto);
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Categories = Categories.CategoryData.Keys.ToList();
+                ViewBag.Statuses = new List<string> { "Активне", "Неактивне" }; // Додаємо статуси
+                return View(dto);
+            }
 
             await _service.UpdateAsync(id, dto);
             return RedirectToAction(nameof(Index));

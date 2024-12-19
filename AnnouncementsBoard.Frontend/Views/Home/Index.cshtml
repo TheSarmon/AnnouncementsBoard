@@ -1,15 +1,18 @@
-﻿@model List<Announcement>
+﻿@model List<AnnouncementsBoard.Frontend.Domain.Models.Announcement>
 
-<a href="@Url.Action("Create")" class="btn btn-success">Add New</a>
+<h1>Дошка оголошень</h1>
+
+<a href="@Url.Action("Create")" class="btn btn-success">Додати нове</a>
 
 <table class="table">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Category</th>
-            <th>Subcategory</th>
-            <th>Actions</th>
+            <th>Назва Оголошення</th>
+            <th>Опис</th>
+            <th>Категорія</th>
+            <th>Підкатегорія</th>
+            <th>Статус</th>
+            <th>Дії</th>
         </tr>
     </thead>
     <tbody>
@@ -20,12 +23,15 @@
                 <td>@announcement.Description</td>
                 <td>@announcement.Category</td>
                 <td>@announcement.SubCategory</td>
+                <td>@announcement.Status</td>
                 <td>
-                    <a href="@Url.Action("Edit", new { id = announcement.Id })" class="btn btn-primary">Edit</a>
+                    <a href="@Url.Action("Edit", new { id = announcement.Id })" class="btn btn-primary">Редагувати</a>
                     <a href="@Url.Action("Delete", new { id = announcement.Id })" class="btn btn-danger"
-                       onclick="return confirm('Are you sure you want to delete this announcement?');">Delete</a>
+                       onclick="return confirm('Ви впевнені що хочете видалити оголошення?');">Видалити</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />

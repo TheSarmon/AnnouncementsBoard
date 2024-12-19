@@ -1,4 +1,4 @@
-﻿namespace AnnouncementsBoard.Frontend.Models
+﻿namespace AnnouncementsBoard.Frontend.Domain.Models
 {
     public class Announcement
     {

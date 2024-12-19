@@ -1,8 +1,11 @@
-﻿using AnnouncementsBoard.Frontend.Models;
+﻿using AnnouncementsBoard.Frontend.Domain.Models;
+using AnnouncementsBoard.Frontend.Domain.DTO;
+using AnnouncementsBoard.Frontend.Application.Services.Interfaces;
+using System.Net.Http.Json;
 
-namespace AnnouncementsBoard.Frontend.Services
+namespace AnnouncementsBoard.Frontend.Application.Services
 {
-    public class FrontendService
+    public class FrontendService : IFrontendService
     {
         private readonly HttpClient _httpClient;
 

@@ -1,32 +1,84 @@
-﻿@model UpdateAnnouncementDTO
+﻿@model AnnouncementsBoard.Frontend.Domain.DTO.UpdateAnnouncementDTO
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
-<h2>Edit Announcement</h2>
+@{
+    var categories = ViewBag.Categories;
+    var statuses = ViewBag.Statuses;
+}
+
+<h2>Редагувати Оголошення</h2>
+
 <form asp-action="Edit">
     <div class="form-group">
-        <label>Title</label>
+        <label>Назва Оголошення</label>
         <input asp-for="Title" class="form-control" />
         <span asp-validation-for="Title" class="text-danger"></span>
     </div>
+
     <div class="form-group">
-        <label>Description</label>
+        <label>Опис</label>
         <textarea asp-for="Description" class="form-control"></textarea>
         <span asp-validation-for="Description" class="text-danger"></span>
     </div>
+
     <div class="form-group">
-        <label>Category</label>
-        <input asp-for="Category" class="form-control" />
+        <label for="Category">Категорія</label>
+        <select id="category" asp-for="Category" class="form-control" onchange="populateSubcategories()">
+            <option value="">-- Оберіть категорію --</option>
+            @foreach (var category in categories)
+            {
+                <option value="@category">@category</option>
+            }
+        </select>
         <span asp-validation-for="Category" class="text-danger"></span>
     </div>
+
     <div class="form-group">
-        <label>SubCategory</label>
-        <input asp-for="SubCategory" class="form-control" />
+        <label for="SubCategory">Підкатегорія</label>
+        <select id="subcategory" asp-for="SubCategory" class="form-control" disabled>
+            <option value="">-- Оберіть підкатегорію --</option>
+        </select>
         <span asp-validation-for="SubCategory" class="text-danger"></span>
     </div>
+
     <div class="form-group">
-        <label>Status</label>
-        <input asp-for="Status" class="form-control" />
+        <label for="Status">Статус</label>
+        <select asp-for="Status" class="form-control">
+            @foreach (var status in statuses)
+            {
+                <option value="@status">@status</option>
+            }
+        </select>
         <span asp-validation-for="Status" class="text-danger"></span>
     </div>
+
     <button type="submit" class="btn btn-primary">Save</button>
 </form>
+
 <a asp-action="Index" class="btn btn-secondary">Back</a>
+
+<script>
+    const categoryData = @Html.Raw(Json.Serialize(AnnouncementsBoard.Frontend.Constants.Categories.CategoryData));
+
+    function populateSubcategories() {
+        const category = document.getElementById("category").value;
+        const subcategorySelect = document.getElementById("subcategory");
+
+        subcategorySelect.innerHTML = '<option value="">-- Оберіть підкатегорію --</option>';
+
+        if (category && categoryData[category]) {
+            subcategorySelect.disabled = false;
+            categoryData[category].forEach(subcategory => {
+                const option = document.createElement("option");
+                option.value = subcategory;
+                option.textContent = subcategory;
+                option.selected = subcategory === "@Model.SubCategory";
+                subcategorySelect.appendChild(option);
+            });
+        }
+    }
+
+    window.onload = populateSubcategories;
+</script>
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />

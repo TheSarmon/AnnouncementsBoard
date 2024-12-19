@@ -1,8 +1,8 @@
-using AnnouncementsBoard.Frontend.Services;
+using AnnouncementsBoard.Frontend.Application.Services;
+using AnnouncementsBoard.Frontend.Application.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddHttpClient("AnnouncementsAPI", client =>
@@ -10,23 +10,14 @@ builder.Services.AddHttpClient("AnnouncementsAPI", client =>
     client.BaseAddress = new Uri("https://localhost:7273/api/");
 });
 
-builder.Services.AddScoped<FrontendService>();
+builder.Services.AddScoped<IFrontendService,FrontendService>();
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 
 app.UseAuthorization();
 
