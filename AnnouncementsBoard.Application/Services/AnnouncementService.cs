@@ -1,8 +1,8 @@
 ﻿using AnnouncementsBoard.Application.Services.Interfaces;
 using AnnouncementsBoard.Domain.Entities;
-using AnnouncementsBoard.Domain.Models;
-using AnnouncementsBoard.Infrastructure.Repositories;
+using AnnouncementsBoard.Domain.DTO;
 using AutoMapper;
+using AnnouncementsBoard.Infrastructure.Repositories.Interfaces;
 
 namespace AnnouncementsBoard.Application.Services
 {

@@ -1,6 +1,6 @@
 ﻿using AnnouncementsBoard.Domain.Entities;
 
-namespace AnnouncementsBoard.Infrastructure.Repositories
+namespace AnnouncementsBoard.Infrastructure.Repositories.Interfaces
 {
     public interface IAnnouncementRepository
     {

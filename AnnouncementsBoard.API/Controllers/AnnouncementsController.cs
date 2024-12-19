@@ -1,5 +1,5 @@
 ﻿using AnnouncementsBoard.Application.Services.Interfaces;
-using AnnouncementsBoard.Domain.Models;
+using AnnouncementsBoard.Domain.DTO;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnnouncementsBoard.API.Controllers

@@ -1,0 +1,34 @@
+.table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .table th, .table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        word-wrap: break-word;
+        overflow-wrap: anywhere;
+    }
+
+    .table th {
+        color: #ffffff;
+        background-color: #343434; /* Світлий фон для заголовків */
+        font-weight: bold;
+    }
+
+    .table tbody tr:nth-child(even) {
+        background-color: #f0f0f0;
+    }
+
+    .table th:nth-child(2), .table td:nth-child(2) {
+        max-width: 600px;
+        white-space: normal;
+    }
+
+.btn-success {
+    margin-bottom: 10px;
+}
+
+

@@ -1,8 +1,8 @@
-﻿@model AnnouncementsBoard.Frontend.Domain.DTO.UpdateAnnouncementDTO
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+﻿@model UpdateAnnouncementDTO
 
 @{
     var categories = ViewBag.Categories;
+    var subCategories = ViewBag.SubCategories;
     var statuses = ViewBag.Statuses;
 }
 
@@ -34,12 +34,19 @@
     </div>
 
     <div class="form-group">
-        <label for="SubCategory">Підкатегорія</label>
-        <select id="subcategory" asp-for="SubCategory" class="form-control" disabled>
-            <option value="">-- Оберіть підкатегорію --</option>
-        </select>
-        <span asp-validation-for="SubCategory" class="text-danger"></span>
-    </div>
+    <label for="SubCategory">Підкатегорія</label>
+    <select id="subcategory" asp-for="SubCategory" class="form-control">
+        <option value="">-- Оберіть підкатегорію --</option>
+        @if (subCategories != null)
+        {
+            foreach (var subCategory in subCategories)
+            {
+                <option value="@subCategory">@subCategory</option>
+            }
+        }
+    </select>
+    <span asp-validation-for="SubCategory" class="text-danger"></span>
+</div>
 
     <div class="form-group">
         <label for="Status">Статус</label>
@@ -52,33 +59,14 @@
         <span asp-validation-for="Status" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="btn btn-primary">Зберегти</button>
+    <a asp-action="Index" class="btn btn-secondary btn-block mt-2">Скасувати</a>
 </form>
 
-<a asp-action="Index" class="btn btn-secondary">Back</a>
-
-<script>
-    const categoryData = @Html.Raw(Json.Serialize(AnnouncementsBoard.Frontend.Constants.Categories.CategoryData));
-
-    function populateSubcategories() {
-        const category = document.getElementById("category").value;
-        const subcategorySelect = document.getElementById("subcategory");
-
-        subcategorySelect.innerHTML = '<option value="">-- Оберіть підкатегорію --</option>';
-
-        if (category && categoryData[category]) {
-            subcategorySelect.disabled = false;
-            categoryData[category].forEach(subcategory => {
-                const option = document.createElement("option");
-                option.value = subcategory;
-                option.textContent = subcategory;
-                option.selected = subcategory === "@Model.SubCategory";
-                subcategorySelect.appendChild(option);
-            });
-        }
-    }
-
-    window.onload = populateSubcategories;
+<script id="categoryData" type="application/json">
+    @Html.Raw(Json.Serialize(categories))
 </script>
 
+<script src="~/js/categories-script.js"></script>
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link href="~/css/form-styles.css" rel="stylesheet" />

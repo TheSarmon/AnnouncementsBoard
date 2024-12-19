@@ -1,7 +1,7 @@
-﻿using AnnouncementsBoard.Infrastructure.Data;
-using Microsoft.Data.SqlClient;
+﻿using AnnouncementsBoard.Domain.Entities;
+using AnnouncementsBoard.Infrastructure.Data;
+using AnnouncementsBoard.Infrastructure.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using AnnouncementsBoard.Domain.Entities;
 
 namespace AnnouncementsBoard.Infrastructure.Repositories
 {

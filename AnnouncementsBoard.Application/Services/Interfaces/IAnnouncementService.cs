@@ -1,5 +1,5 @@
 ﻿using AnnouncementsBoard.Domain.Entities;
-using AnnouncementsBoard.Domain.Models;
+using AnnouncementsBoard.Domain.DTO;
 
 namespace AnnouncementsBoard.Application.Services.Interfaces
 {

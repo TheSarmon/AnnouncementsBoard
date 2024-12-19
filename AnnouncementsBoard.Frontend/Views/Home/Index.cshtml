@@ -1,13 +1,45 @@
-﻿@model List<AnnouncementsBoard.Frontend.Domain.Models.Announcement>
+﻿@model List<Announcement>
 
-<h1>Дошка оголошень</h1>
+@{
+    var categories = ViewBag.Categories;
+}
 
-<a href="@Url.Action("Create")" class="btn btn-success">Додати нове</a>
+<div class="text-center mb-4">
+    <h1>Дошка оголошень</h1>
+</div>
+
+<form method="get" class="row align-items-center mb-3">
+    <div class="col-md-4">
+        <input type="text" id="search" name="searchQuery" class="form-control" placeholder="Пошук..." />
+    </div>
+
+    <div class="col-md-3">
+        <select id="category" name="category" class="form-control" onchange="populateSubcategories()">
+            <option value="">-- Оберіть категорію --</option>
+            @foreach (var category in categories)
+            {
+                <option value="@category">@category</option>
+            }
+        </select>
+    </div>
+
+    <div class="col-md-3">
+        <select id="subcategory" name="subcategory" class="form-control">
+            <option value="">-- Оберіть підкатегорію --</option>
+        </select>
+    </div>
+
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-primary btn-block">Фільтрувати</button>
+    </div>
+</form>
+
+<a href="@Url.Action("Create")" class="btn btn-success">Додати оголошення</a>
 
 <table class="table">
     <thead>
         <tr>
-            <th>Назва Оголошення</th>
+            <th>Назва оголошення</th>
             <th>Опис</th>
             <th>Категорія</th>
             <th>Підкатегорія</th>
@@ -34,4 +66,10 @@
     </tbody>
 </table>
 
+<script id="categoryData" type="application/json">
+    @Html.Raw(Json.Serialize(Categories.CategoryData))
+</script>
+
+<script src="~/js/categories-script.js"></script>
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link href="~/css/indexPage.css" rel="stylesheet" />

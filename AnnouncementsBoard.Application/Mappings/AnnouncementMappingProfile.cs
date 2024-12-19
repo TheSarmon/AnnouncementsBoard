@@ -1,12 +1,12 @@
 ﻿using AnnouncementsBoard.Domain.Entities;
-using AnnouncementsBoard.Domain.Models;
+using AnnouncementsBoard.Domain.DTO;
 using AutoMapper;
 
 namespace AnnouncementsBoard.Application.Mappings
 {
-    public class AnnouncementProfile : Profile
+    public class AnnouncementMappingProfile : Profile
     {
-        public AnnouncementProfile()
+        public AnnouncementMappingProfile()
         {
             CreateMap<CreateAnnouncementDTO, Announcement>()
                 .ForMember(dest => dest.CreatedDate, opt => opt.MapFrom(_ => DateTime.UtcNow))
@@ -17,7 +17,6 @@ namespace AnnouncementsBoard.Application.Mappings
                 .ForMember(dest => dest.CreatedDate, opt => opt.Ignore())
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src =>
                     string.IsNullOrEmpty(src.Status) ? "Активне" : src.Status));
-
         }
     }
 }

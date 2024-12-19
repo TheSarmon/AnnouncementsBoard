@@ -11,11 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnnouncementsBoard.Domain",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnnouncementsBoard.Application", "AnnouncementsBoard.Application\AnnouncementsBoard.Application.csproj", "{9F0A366F-4EF5-493C-BF9F-99E95F92BF22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnouncementsBoard.Frontend", "AnnouncementsBoard.Frontend\AnnouncementsBoard.Frontend.csproj", "{1C54CF4D-C696-4C47-BC7B-F719D022EC95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnnouncementsBoard.Frontend", "AnnouncementsBoard.Frontend\AnnouncementsBoard.Frontend.csproj", "{1C54CF4D-C696-4C47-BC7B-F719D022EC95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnouncementsBoard.Frontend.Application", "AnnouncementsBoard.Frontend.Application\AnnouncementsBoard.Frontend.Application.csproj", "{5E510E1A-1C16-46B5-84FE-38FFC9B53AF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnnouncementsBoard.Frontend.Application", "AnnouncementsBoard.Frontend.Application\AnnouncementsBoard.Frontend.Application.csproj", "{5E510E1A-1C16-46B5-84FE-38FFC9B53AF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnouncementsBoard.Frontend.Domain", "AnnouncementsBoard.Frontend.Domain\AnnouncementsBoard.Frontend.Domain.csproj", "{A05F5E7C-B3F4-493A-B1CC-35AF12226686}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnnouncementsBoard.Frontend.Domain", "AnnouncementsBoard.Frontend.Domain\AnnouncementsBoard.Frontend.Domain.csproj", "{A05F5E7C-B3F4-493A-B1CC-35AF12226686}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D056E170-C859-4146-974B-3096C4C92B46}"
 EndProject

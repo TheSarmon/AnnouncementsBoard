@@ -1,4 +1,4 @@
-namespace AnnouncementsBoard.Frontend.Constants
+namespace AnnouncementsBoard.Frontend.Domain.Constants
 {
     public static class Categories
     {

@@ -1,4 +1,4 @@
-﻿namespace AnnouncementsBoard.Domain.Models
+﻿namespace AnnouncementsBoard.Domain.DTO
 {
     public class UpdateAnnouncementDTO
     {

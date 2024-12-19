@@ -1,11 +1,10 @@
-﻿@model AnnouncementsBoard.Frontend.Domain.DTO.CreateAnnouncementDTO
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+﻿@model CreateAnnouncementDTO;
 
 @{
-    var categories = ViewBag.Categories as List<string>;
+    var categories = ViewBag.Categories;
 }
 
-<h2>Створення Оголошення</h2>
+<h2>Створити Оголошення</h2>
 
 <form asp-action="Create" method="post">
     <div class="form-group">
@@ -20,7 +19,6 @@
         <span asp-validation-for="Description" class="text-danger"></span>
     </div>
 
-    <!-- Вибір категорії -->
     <div class="form-group">
         <label for="Category">Категорія</label>
         <select id="category" asp-for="Category" class="form-control" onchange="populateSubcategories()">
@@ -33,7 +31,6 @@
         <span asp-validation-for="Category" class="text-danger"></span>
     </div>
 
-    <!-- Вибір підкатегорії -->
     <div class="form-group">
         <label for="SubCategory">Підкатегорія</label>
         <select id="subcategory" asp-for="SubCategory" class="form-control" disabled>
@@ -43,32 +40,13 @@
     </div>
 
     <button type="submit" class="btn btn-primary">Підтвердити</button>
+    <a asp-action="Index" class="btn btn-secondary btn-block mt-2">Скасувати</a>
 </form>
 
-<script>
-    const categoryData = @Html.Raw(Json.Serialize(AnnouncementsBoard.Frontend.Constants.Categories.CategoryData));
-
-    function populateSubcategories() {
-        const category = document.getElementById("category").value;
-        const subcategorySelect = document.getElementById("subcategory");
-
-        subcategorySelect.innerHTML = '<option value="">-- Оберіть підкатегорію --</option>'; // Очищення підкатегорій
-
-        if (category) {
-            subcategorySelect.disabled = false; // Активувати
-            subcategorySelect.innerHTML = '<option value="">-- Оберіть підкатегорію --</option>'; // Очищення списку
-
-            categoryData[category]?.forEach(subcategory => {
-                const option = document.createElement("option");
-                option.value = subcategory;
-                option.textContent = subcategory;
-                subcategorySelect.appendChild(option);
-            });
-        } else {
-            subcategorySelect.disabled = true; // Зробити неактивним
-            subcategorySelect.innerHTML = '<option value="">-- Оберіть підкатегорію --</option>'; // Скинути значення
-        }
-    }
+<script id="categoryData" type="application/json">
+    @Html.Raw(Json.Serialize(categories))
 </script>
 
+<script src="~/js/categories-script.js"></script>
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link href="~/css/form-styles.css" rel="stylesheet" />

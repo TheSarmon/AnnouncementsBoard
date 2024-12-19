@@ -1,4 +1,6 @@
-﻿namespace AnnouncementsBoard.Frontend.Domain.Models
+﻿// I did not use models from AnnouncementsBoard.Domain
+// because it violates the independence of the microservices.
+namespace AnnouncementsBoard.Frontend.Domain.Entities
 {
     public class Announcement
     {

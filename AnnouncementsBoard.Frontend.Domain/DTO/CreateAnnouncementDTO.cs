@@ -1,4 +1,6 @@
-﻿namespace AnnouncementsBoard.Frontend.Domain.DTO
+﻿// I did not use models from AnnouncementsBoard.Domain
+// because it violates the independence of the microservices.
+namespace AnnouncementsBoard.Frontend.Domain.DTO
 {
     public class CreateAnnouncementDTO
     {
