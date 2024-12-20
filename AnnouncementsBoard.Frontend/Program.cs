@@ -6,9 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddHttpClient("AnnouncementsAPI", client =>
+builder.Services.AddHttpClient<IFrontendService, FrontendService>(client =>
 {
-    client.BaseAddress = new Uri("https://localhost:7273/api/");
+    client.BaseAddress = new Uri(builder.Configuration["ApiSettings:BaseUrl"]);
 });
 
 builder.Services.AddScoped<IFrontendService, FrontendService>();

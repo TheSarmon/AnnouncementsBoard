@@ -2,6 +2,7 @@
 using AnnouncementsBoard.Frontend.Domain.DTO;
 using AnnouncementsBoard.Frontend.Application.Services.Interfaces;
 using System.Net.Http.Json;
+using Microsoft.Extensions.Configuration;
 
 namespace AnnouncementsBoard.Frontend.Application.Services
 {
@@ -9,9 +10,10 @@ namespace AnnouncementsBoard.Frontend.Application.Services
     {
         private readonly HttpClient _httpClient;
 
-        public FrontendService(IHttpClientFactory clientFactory)
+        public FrontendService(IHttpClientFactory httpClientFactory, IConfiguration configuration)
         {
-            _httpClient = clientFactory.CreateClient("AnnouncementsAPI");
+            _httpClient = httpClientFactory.CreateClient();
+            _httpClient.BaseAddress = new Uri(configuration["ApiSettings:BaseUrl"]);
         }
 
         public async Task<List<Announcement>> GetAllAsync()
